@@ -22,7 +22,20 @@ The frontend fetches graph metadata, renders a dynamic input form per graph, inv
 
 ## Getting Started
 
-### Backend
+### Docker (recommended — one command)
+
+```bash
+cp .env.example .env      # add your ANTHROPIC_API_KEY
+docker compose up --build
+```
+
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:8000`
+- API docs: `http://localhost:8000/docs`
+
+### Manual setup
+
+**Backend**
 
 ```bash
 cd backend
@@ -33,7 +46,7 @@ uvicorn main:app --reload
 
 Server runs at `http://localhost:8000`. API docs at `http://localhost:8000/docs`.
 
-### Frontend
+**Frontend**
 
 ```bash
 cd frontend
